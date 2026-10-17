@@ -23,3 +23,9 @@ The app is expected to run at `http://localhost:3000`.
 
 All QA engineers pull the latest changes before starting work, commit with
 clear messages, and push to GitHub instead of sharing files over email or pen drives.
+
+## Contributors
+
+- QA Engineer 1 - Login module tests
+- QA Engineer 2 - Attendance module tests
+- QA Engineer 3 - Reports module tests (upcoming)
