@@ -47,3 +47,12 @@ def test_empty_fields(driver):
     login(driver, "", "")
     error = driver.find_element(By.ID, "error-msg")
     assert "required" in error.text.lower()
+
+
+def test_logout(driver):
+    """TC_LOGIN_04: Logout should return the user to the login page."""
+    login(driver, "teacher01", "Pass@123")
+    WebDriverWait(driver, 10).until(EC.url_contains("/dashboard"))
+    driver.find_element(By.ID, "logout-btn").click()
+    WebDriverWait(driver, 10).until(EC.url_contains("/login"))
+    assert driver.find_element(By.ID, "login-btn").is_displayed()
